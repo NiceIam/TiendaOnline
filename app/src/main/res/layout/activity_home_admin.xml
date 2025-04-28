@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <!-- Título con sombra neón -->
+    <TextView
+        android:id="@+id/titleAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADMIN DASHBOARD"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:shadowColor="#00FFAA"
+        android:shadowRadius="10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- Botón 1: Listado Productos (Verde neón) -->
+    <Button
+        android:id="@+id/btnProductos"
+        android:onClick="irAListadoProductos"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:text="📦 LISTADO PRODUCTOS"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#121212"
+        android:backgroundTint="#00FFAA"
+        android:foreground="?attr/selectableItemBackground"
+        android:stateListAnimator="@null"
+        app:layout_constraintTop_toBottomOf="@id/titleAdmin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="140dp"
+        android:elevation="12dp"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <!-- Botón 2: Carrito de Compras (Rojo coral) -->
+    <Button
+        android:id="@+id/btnCarrito"
+        android:onClick="irACarritoCompras"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:text="🛒 CARRITO DE COMPRAS"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#121212"
+        android:backgroundTint="#FF6B6B"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btnProductos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Botón 3: Registro de Clientes (Azul eléctrico) -->
+    <Button
+        android:id="@+id/btnClientes"
+        android:onClick="irARegistroClientes"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:text="👥 REGISTRO DE CLIENTES"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#121212"
+        android:backgroundTint="#4CC9F0"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btnCarrito"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
